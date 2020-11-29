@@ -1,6 +1,8 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import LaunchItem from "./LaunchItem";
+import MissionKey from "./MissionKey";
+import Loader from "./Loader";
 
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
@@ -18,12 +20,9 @@ const Launches = () => {
   return (
     <>
       <h1 className="display-4 my-3">Launches</h1>
-      {loading && <p>Loading...</p>}
+      <MissionKey />
+      <Loader />
       {error && console.log(error)}
-      {data &&
-        data.launches.map((launch) => (
-          <LaunchItem key={launch.flight_number} launch={launch} />
-        ))}
     </>
   );
 };
