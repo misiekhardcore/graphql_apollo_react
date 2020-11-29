@@ -21,8 +21,9 @@ const Launches = () => {
     <>
       <h1 className="display-4 my-3">Launches</h1>
       <MissionKey />
-      <Loader />
+      {loading && <Loader />}
       {error && console.log(error)}
+      {data && data.launches.map((launch) => <LaunchItem launch={launch} />)}
     </>
   );
 };
