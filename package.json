@@ -1,0 +1,20 @@
+{
+  "name": "graphql_apollo_react",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/misiekhardcore/graphql_apollo_react.git",
+  "author": "misiekhardcore <misiekhardcore@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
